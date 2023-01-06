@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<style>
+    
+    img{
+        float:left;
+    }
+
+    p{
+        text-align: center;
+    }
+
+    h2{
+        text-align: center;
+    }
+    h5{
+        padding:0px;
+        text-align: center;
+
+    }
+
+</style>
+</head>
+
+<body>
+    <h2> About Me</h2>
+    <img class="img" src="img/me.jpeg" style="width:300px; height:350px; margin-right:10px;"> <br><br>
+    <h5> 20</h5>
+    <p>Hey there! My name is yuzheng. i am currently studying in republic poly year 2, in the course <br>
+       digital design development diploma. This course is a mixture of designing and coding which is<br>
+       quite tough but fun at the same time. through this course, i learned to use many different tools <br>
+       like adobe illustrator, adobe xd, adobe photoshop, java eclipse, netbeans, VS codes and many more!<br>
+       Other than school, i have a part time job nearby my house which is ITEA. i would usually work there<br>
+       during the weekends to earn extra money and have fun working with my friends there.</p>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+    anime({
+        targets: 'img',
+        translateY: -50,
+        rotate: 360,
+        delay: anime.stagger(100, {start: 1000}),
+        direction: 'alternate'
+    });
+
+    anime({
+        targets: 'p',
+        translateX: {value: 50, duration: 100},
+        scale: {value: 1, duration: 1600, easing: 'easeInOutQuart'},
+        delay: 250, 
+        direction: 'alternate',
+        loop: true
+        });
+    
+    anime({
+        targets: 'h5',
+        translateX: {value: 50, duration: 100},
+        scale: {value: 1, duration: 1600, easing: 'easeInOutQuart'},
+        delay: 250, 
+        direction: 'alternate',
+        loop: true
+        });
+
+    anime({
+        targets: 'h5',
+        innerHTML: [0, 20], //start and end values
+        easing: 'linear',
+        round: 1, //rounds off to zero decimal places 
+        duration: 2000
+        });
+
+    var animation = anime({
+        targets: 'h2',
+        translateX: 300,
+        scale: 2,
+        easing: 'easeInOutExpo',
+        direction: 'alternate', 
+        duration: 2000,
+        loop: true,
+        autoplay: false
+        });
+        
+    </script>
+
+</body>
+</html>
